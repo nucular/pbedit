@@ -107,7 +107,7 @@ PBE.saveToPB = function(uuid) {
     },
     dataType: "json",
     success: function(res) {
-      if (res.status == "created") {
+      if (res.status == "created" || res.status == "already exists") {
         location.href = PBE.PBHOST + "/" + res.long + ".html";
       }
     }
